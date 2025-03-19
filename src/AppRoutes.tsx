@@ -35,6 +35,7 @@ import Index from "./pages/Index";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import { useAuth0 } from "@auth0/auth0-react";
+import ManageVpnPage from "./pages/ManageVpnPage";
 
 const AppRoutes = () => {
     const { isAuthenticated, isLoading } = useAuth0();
@@ -59,6 +60,7 @@ const AppRoutes = () => {
             <Route element={<ProtectedRoute />}>
                 <Route path="/home" element={<Layout showHero={true}><HomePage /></Layout>} />
                 <Route path="/user-profile" element={<Layout><UserProfilePage /></Layout>} />
+                <Route path="/manage-vpn" element={<Layout><ManageVpnPage /></Layout>} />
             </Route>
 
             {/* Redirect unknown routes */}

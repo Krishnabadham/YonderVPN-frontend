@@ -6,3 +6,20 @@ export type User = {
     city: string;
     country: string;
 };
+
+export type MenuItem = {
+    _id: string;
+    name: string;
+    price: number;
+};
+
+export type Vpn = {
+    _id: string;
+    user: string;
+    vpnName: string;
+    city: string;
+    country: string;
+    menuItems: MenuItem[];
+    imageUrl: string;
+    lastUpdated: string;
+};

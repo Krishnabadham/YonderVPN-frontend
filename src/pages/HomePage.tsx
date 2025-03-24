@@ -2,16 +2,26 @@
 import landingImage from "../assets/landingImage.jpg";
 import playstoreImage from "../assets/Playstore_Download.jpg";
 import appstoreImage from "../assets/Appstore_Download.png";
+import SearchBar, { SearchForm } from "@/components/SearchBar";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+    const navigate = useNavigate();
+
+    const handleSearchSubmit = (searchFormValues: SearchForm) => {
+        navigate({
+            pathname: `/search/${searchFormValues.searchQuery}`,
+        });
+    };
     return (
         <div className="flex flex-col gap-12">
             {/* Header Section */}
-            <div className="bg-white rounded-lg shadow-md py-8 flex flex-col gap-6 text-center -mt-16">
+            <div className="md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-6 text-center -mt-16">
                 <h1 className="text-5xl font-bold tracking-tight text-orange-600">
                     Encrypt your connection with a VPN
                 </h1>
                 <span className="text-xl">Your VPN is Just a click away!</span>
+                <SearchBar placeHolder="Search by City " onSubmit={handleSearchSubmit} />
             </div>
 
             {/* Main Content Section */}

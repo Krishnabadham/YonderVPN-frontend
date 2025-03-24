@@ -23,3 +23,12 @@ export type Vpn = {
     imageUrl: string;
     lastUpdated: string;
 };
+
+export type VpnSearchResponse = {
+    data: Vpn[];
+    pagination:{
+        total: number;
+        page: number;
+        pages: number;
+    };
+};

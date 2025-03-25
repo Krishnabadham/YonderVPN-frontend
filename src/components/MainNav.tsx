@@ -23,16 +23,16 @@
 // export default MainNav
 
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import UsernameMenu from "./UsernameMenu";
 
 const MainNav = () => {
     return (
         <nav className="flex space-x-4 items-center">
-            {/* <Link to="/home" className="font-bold hover:text-orange-500 transition-colors">
-                Home
+            <Link to="/order-status" className="font-bold hover:text-orange-500 transition-colors">
+                Order Status
             </Link>
-            <Link to="/user-profile" className="font-bold hover:text-orange-500 transition-colors">
+            {/* <Link to="/user-profile" className="font-bold hover:text-orange-500 transition-colors">
                 Profile
             </Link> */}
             {/* User dropdown menu */}

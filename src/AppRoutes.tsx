@@ -52,6 +52,7 @@ const AppRoutes = () => {
 
     return (
         <Routes>
+            <Route path="/auth-callback" element={<AuthCallbackPage />} />
             {/* If user is not authenticated, show the Index page */}
             {!isAuthenticated ? (
                 <Route path="/" element={<Index />} />
@@ -59,7 +60,7 @@ const AppRoutes = () => {
                 <Route path="/" element={<Navigate to="/home" replace />} />
             )}
 
-            <Route path="/auth-callback" element={<AuthCallbackPage />} />
+            
 
             {/* Protected Routes - Only accessible when logged in */}
             <Route element={<ProtectedRoute />}>

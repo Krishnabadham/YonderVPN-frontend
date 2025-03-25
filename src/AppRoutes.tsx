@@ -56,7 +56,7 @@ const AppRoutes = () => {
             {!isAuthenticated ? (
                 <Route path="/" element={<Index />} />
             ) : (
-                <Route path="/" element={<Navigate to="/home" replace />} />
+                <Route path="/" element={<Navigate to="/auth-callback" replace />} />
             )}
 
             <Route path="/auth-callback" element={<AuthCallbackPage />} />

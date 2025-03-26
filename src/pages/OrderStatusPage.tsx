@@ -1,4 +1,5 @@
 import { useGetMyOrders } from "@/api/OrderApi";
+import OrderStatusDetail from "@/components/OrderStatusDetail";
 import OrderStatusHeader from "@/components/OrderStatusHeader";
 
 const OrderStatusPage = () => {
@@ -15,6 +16,9 @@ const OrderStatusPage = () => {
             {orders.map((order) =>(
                 <div className="space-y-10 bg-gray-50 p-10 rounded-lg">
                     <OrderStatusHeader order={order} />
+                    <div className="grid gap-10 md:grid-cols-2">
+                        <OrderStatusDetail order={order} />
+                    </div>
                 </div>
             ))}
         </div>

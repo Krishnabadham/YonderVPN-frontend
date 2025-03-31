@@ -48,14 +48,14 @@ import { Button } from "./ui/button";
 import useUserData from "@/hooks/useUserData";
 
 const UsernameMenu = () => {
-    const { logout } = useAuth0();
+    const { user, logout } = useAuth0();
     const { userData } = useUserData();
 
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-orange-500 gap-2" >
                 <CircleUserRound className="text-orange-500" />
-                {userData?.email}
+                {user?.email}
             </DropdownMenuTrigger>
             <DropdownMenuContent>
                 {/* Conditionally render "Manage VPN" link for admins */}
